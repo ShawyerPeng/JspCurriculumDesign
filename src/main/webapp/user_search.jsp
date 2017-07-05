@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,17 +21,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="index.html" class="navbar-brand">Admin</a>
+            <a href="index.jsp" class="navbar-brand">Admin</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>后台首页</a></li>
-                <li><a href="user_list.html"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
-                <li class="active"><a href="content.html"><span class="glyphicon glyphicon-list-alt"></span>公告管理</a></li>
-                <!--<li><a href="tag.html"><span class="glyphicon glyphicon-tag"></span>标签管理</a></li>-->
+                <li><a href="index.jsp"><span class="glyphicon glyphicon-home"></span>后台首页</a></li>
+                <li class="active"><a href="user_list.jsp"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
+                <li><a href="content.jsp"><span class="glyphicon glyphicon-list-alt"></span>公告管理</a></li>
+                <!--<li><a href="tag.jsp"><span class="glyphicon glyphicon-tag"></span>标签管理</a></li>-->
                 <li><a href="form.jsp"><span class="glyphicon glyphicon-hand-right"></span>教室申请</a></li>
                 <li><a href="classroom_info.jsp"><span class="glyphicon glyphicon-info-sign"></span>教室信息</a></li>
-                <li><a href="classroom_status.jsp"><span class="glyphicon glyphicon-info-sign"></span>教室状态</a></li>
+                <li><a href="classroom_status.jsp"><span class="glyphicon glyphicon-exclamation-sign"></span>教室状态</a></li>
                 <li><a href="application_history.jsp"><span class="glyphicon glyphicon-bookmark"></span>申请历史</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -47,7 +48,7 @@
                         <li><a href="#" class=""><span class="glyphicon glyphicon-heart"></span>我的收藏</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html"><span class="glyphicon glyphicon-off"></span>退出</a></li>
+                <li><a href="index.jsp"><span class="glyphicon glyphicon-off"></span>退出</a></li>
             </ul>
         </div>
     </div>
@@ -58,55 +59,46 @@
     <div class="row">
         <div class="col-md-2">
             <div class="list-group">
-                <a href="content.html" class="list-group-item">公告管理</a>
-                <a href="content_post.html" class="list-group-item active">添加公告</a>
+                <a href="user_list.jsp" class="list-group-item">用户管理</a>
+                <a href="user_list.jsp" class="list-group-item active">用户搜索</a>
+                <a href="" role="button" class="list-group-item" data-toggle="modal" data-target="#myModal">添加用户</a>
             </div>
         </div>
         <div class="col-md-10">
             <div class="page-header">
-                <h1>添加公告</h1>
+                <h1>搜索</h1>
             </div>
             <ul class="nav nav-tabs">
-                <li><a href="content.html">公告管理</a></li>
-                <li class="active"><a href="user_search.html">添加公告</a></li>
+                <li><a href="user_list.jsp">用户列表</a></li>
+                <li class="active"><a href="user_list.jsp">用户搜索</a></li>
+                <li>
+                    <a href="" role="button" data-toggle="modal" data-target="#myModal">添加用户</a>
+                </li>
             </ul>
-            <form action="#">
-                <div class="form-group">
-                    <label for="title">标题</label>
-                    <input type="text" id="title" class="form-control" placeholder="请输入文章标题">
+            <form action="#" class="user_search">
+                <div class="alert alert-info" role="alert">
+                    <strong>技巧提示:</strong>支持模糊搜索和匹配搜索，匹配搜索使用*代替！
                 </div>
                 <div class="form-group">
-                    <label for="text">文章内容</label>
-                    <textarea class="form-control" name="" id="text" cols="30" rows="10"></textarea>
+                    <label for="name">用户名</label>
+                    <input type="text" id="name" class="form-control" placeholder="请输入用户名">
                 </div>
-                <div class="checkbox pull-left">
-                    <label>
-                        <input type="checkbox">全局置顶
-                    </label>
+                <div class="form-group">
+                    <label for="uid">UID</label>
+                    <input type="text" id="uid" class="form-control" placeholder="请输入用户UID">
                 </div>
-                <button class="btn btn-default pull-right" type="submit">发布文章</button>
+                <div class="form-group">
+                    <label for="group">用户组</label>
+                    <select name="" id="group" class="form-control">
+                        <option value="">限制会员</option>
+                        <option value="">新手上路</option>
+                        <option value="">注册会员</option>
+                        <option value="">中级会员</option>
+                        <option value="">高级会员</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
             </form>
-            <div class="col-md-12">
-                <nav aria-label="Page navigation" class="pull-right">
-                    <ul class="pagination">
-                        <li>
-                            <a href="#" aria-label="Previous">
-                                <span aria-hidden="true">&laquo;</span>
-                            </a>
-                        </li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li>
-                            <a href="#" aria-label="Next">
-                                <span aria-hidden="true">&raquo;</span>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
         </div>
     </div>
 </div>
@@ -115,8 +107,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                    aria-hidden="true">&times;</span></button>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">添加用户</h4>
             </div>
             <div class="modal-body">
@@ -152,24 +143,6 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
                 <button type="button" class="btn btn-primary">提交</button>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                    aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-            </div>
-            <div class="modal-body">
-                ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>

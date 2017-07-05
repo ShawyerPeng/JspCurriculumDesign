@@ -35,7 +35,7 @@
                 <%--<li><a href="tag.html"><span class="glyphicon glyphicon-tag"></span>标签管理</a></li>--%>
                 <li><a href="form.jsp"><span class="glyphicon glyphicon-hand-right"></span>教室申请</a></li>
                 <li class="active"><a href="classroom_info.jsp"><span class="glyphicon glyphicon-info-sign"></span>教室信息</a></li>
-                <li><a href="classroom_status.jsp"><span class="glyphicon glyphicon-info-sign"></span>教室状态</a></li>
+                <li><a href="classroom_status.jsp"><span class="glyphicon glyphicon-exclamation-sign"></span>教室状态</a></li>
                 <li><a href="application_history.jsp"><span class="glyphicon glyphicon-bookmark"></span>申请历史</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">

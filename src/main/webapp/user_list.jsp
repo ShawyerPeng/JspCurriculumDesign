@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,17 +21,17 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="index.html" class="navbar-brand">Admin</a>
+            <a href="index.jsp" class="navbar-brand">Admin</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>后台首页</a></li>
-                <li class="active"><a href="user_list.html"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
-                <li><a href="content.html"><span class="glyphicon glyphicon-list-alt"></span>公告管理</a></li>
-                <!--<li><a href="tag.html"><span class="glyphicon glyphicon-tag"></span>标签管理</a></li>-->
+                <li><a href="index.jsp"><span class="glyphicon glyphicon-home"></span>后台首页</a></li>
+                <li class="active"><a href="user_list.jsp"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
+                <li><a href="content.jsp"><span class="glyphicon glyphicon-list-alt"></span>公告管理</a></li>
+                <!--<li><a href="tag.jsp"><span class="glyphicon glyphicon-tag"></span>标签管理</a></li>-->
                 <li><a href="form.jsp"><span class="glyphicon glyphicon-hand-right"></span>教室申请</a></li>
                 <li><a href="classroom_info.jsp"><span class="glyphicon glyphicon-info-sign"></span>教室信息</a></li>
-                <li><a href="classroom_status.jsp"><span class="glyphicon glyphicon-info-sign"></span>教室状态</a></li>
+                <li><a href="classroom_status.jsp"><span class="glyphicon glyphicon-exclamation-sign"></span>教室状态</a></li>
                 <li><a href="application_history.jsp"><span class="glyphicon glyphicon-bookmark"></span>申请历史</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -47,7 +48,7 @@
                         <li><a href="#" class=""><span class="glyphicon glyphicon-heart"></span>我的收藏</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html"><span class="glyphicon glyphicon-off"></span>退出</a></li>
+                <li><a href="index.jsp"><span class="glyphicon glyphicon-off"></span>退出</a></li>
             </ul>
         </div>
     </div>
@@ -58,8 +59,8 @@
     <div class="row">
         <div class="col-md-2">
             <div class="list-group">
-                <a href="user_list.html" class="list-group-item active">用户管理</a>
-                <a href="user_search.html" class="list-group-item">用户搜索</a>
+                <a href="user_list.jsp" class="list-group-item active">用户管理</a>
+                <a href="user_search.jsp" class="list-group-item">用户搜索</a>
                 <a href="" role="button" class="list-group-item" data-toggle="modal" data-target="#myModal">添加用户</a>
             </div>
         </div>
@@ -68,8 +69,8 @@
                 <h1>添加内容</h1>
             </div>
             <ul class="nav nav-tabs">
-                <li class="active"><a href="user_list.html">用户列表</a></li>
-                <li><a href="user_search.html">用户搜索</a></li>
+                <li class="active"><a href="user_list.jsp">用户列表</a></li>
+                <li><a href="user_search.jsp">用户搜索</a></li>
                 <li><a href="" role="button" data-toggle="modal" data-target="#myModal">添加用户</a></li>
             </ul>
             <table class="table">

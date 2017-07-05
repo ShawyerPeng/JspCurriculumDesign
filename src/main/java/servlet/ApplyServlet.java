@@ -46,6 +46,8 @@ public class ApplyServlet extends HttpServlet {
         int id = SearchRoomId.searchRoomId(conn, building, Integer.parseInt(room_name));
 
         UpdateStatus.updatestate(conn, id, timeofuse, dateofuse, "已占用");
+
+        response.sendRedirect("/form.jsp");
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

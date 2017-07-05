@@ -39,7 +39,6 @@ public class LoginServlet extends HttpServlet {
                 flag = true;        //表示登陆成功
                 username = rs.getString(1);
             }
-            System.out.println(username);
         } catch (Exception e){
             e.printStackTrace();
         } finally{

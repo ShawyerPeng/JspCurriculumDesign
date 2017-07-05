@@ -38,13 +38,13 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>后台首页</a></li>
-                <li><a href="user_list.html"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
-                <li><a href="content.html"><span class="glyphicon glyphicon-list-alt"></span>公告管理</a></li>
-                <%--<li><a href="tag.html"><span class="glyphicon glyphicon-tag"></span>标签管理</a></li>--%>
+                <li><a href="index.jsp"><span class="glyphicon glyphicon-home"></span>后台首页</a></li>
+                <li><a href="user_list.jsp"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
+                <li><a href="content.jsp"><span class="glyphicon glyphicon-list-alt"></span>公告管理</a></li>
+                <%--<li><a href="tag.jsp"><span class="glyphicon glyphicon-tag"></span>标签管理</a></li>--%>
                 <li class="active"><a href="form.jsp"><span class="glyphicon glyphicon-hand-right"></span>教室申请</a></li>
                 <li><a href="classroom_info.jsp"><span class="glyphicon glyphicon-info-sign"></span>教室信息</a></li>
-                <li><a href="classroom_status.jsp"><span class="glyphicon glyphicon-info-sign"></span>教室状态</a></li>
+                <li><a href="classroom_status.jsp"><span class="glyphicon glyphicon-exclamation-sign"></span>教室状态</a></li>
                 <li><a href="application_history.jsp"><span class="glyphicon glyphicon-bookmark"></span>申请历史</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -166,23 +166,25 @@
 </body>
 
 <script>
-//    function submitForm (){
-//        firstName = $("#firstName").val();
-//        lastName = $("#lastName").val();
-//        inputEmail = $("#inputEmail").val();
-//        phoneNumber = $("#phoneNumber").val();
-//        dateofbirth = $("#dateofbirth").val();
-//        postalAddress = $("#postalAddress").val();
-//        Postcode = $("#Postcode").val();
-//
-//        $('.myform').hide();
-//
-//        $('.container').html('<p>' + firstName + '</p>' + '<p>' + lastName + '</p>' + '<p>' + inputEmail + '</p>' + '<p>' + phoneNumber + '</p>' + '<p>' + dateofbirth + '</p>' + '<p>' + postalAddress + '</p>' + '<p>' + Postcode + '</p>');
-//    }
-//
-//    $('.myform').formValidation(function(){
-//
-//    });
+    function submitForm(){
+        $.ajax({
+            url: '/ajaxSearch',
+            type: 'POST',
+            data: user,
+            dataType: "json",
+            contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+            success: function (returndata) {
+                for(var i=0; i<(Object.keys(returndata)).length; i++) {
+                    console.log(returndata[i].building);
+                    $("#available option").remove();
+                    $("#available").append("<option>" + returndata[i].building + returndata[i].room_name + "</option>");
+                }
+            },
+            error: function (returndata) {
+                console.log(returndata);
+            }
+        });
+    }
 
     function search() {
         var user = {

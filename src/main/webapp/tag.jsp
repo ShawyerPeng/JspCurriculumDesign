@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,10 +25,10 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>后台首页</a></li>
-                <li><a href="user_list.html"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
-                <li><a href="content.html"><span class="glyphicon glyphicon-list-alt"></span>内容管理</a></li>
-                <li class="active"><a href="tag.html"><span class="glyphicon glyphicon-tag"></span>标签管理</a></li>
+                <li><a href="index.jsp"><span class="glyphicon glyphicon-home"></span>后台首页</a></li>
+                <li><a href="user_list.jsp"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
+                <li><a href="content.jsp"><span class="glyphicon glyphicon-list-alt"></span>内容管理</a></li>
+                <li class="active"><a href="tag.jsp"><span class="glyphicon glyphicon-tag"></span>标签管理</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
