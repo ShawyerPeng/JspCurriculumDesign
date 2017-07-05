@@ -59,8 +59,8 @@ public class AjaxSearchServlet extends HttpServlet {
             ResultSet rs,rs1;
             sql = con.createStatement();
             sql1 = con.createStatement();
-            System.out.println(date);
             rs = sql.executeQuery("select room_id from classroom_sta where " + "date_use=convert('"+date+"',date)" + " and time_use='"+time + "' and state='空闲'");
+            System.out.println("select room_id from classroom_sta where " + "date_use=convert('"+date+"',date)" + " and time_use='"+time + "' and state='空闲'");
             while(rs.next()){
                 Classroom c = new Classroom();
                 int roomId = rs.getInt(1);  // 从1开始

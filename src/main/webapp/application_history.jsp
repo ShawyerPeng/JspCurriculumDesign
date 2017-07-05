@@ -11,10 +11,56 @@
     <script src="https://cdn.bootcss.com/bootstrap-table/1.11.1/extensions/export/bootstrap-table-export.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap-table/1.11.1/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap-table/1.11.1/extensions/filter/bootstrap-table-filter.min.js"></script>
+
+    <link rel="stylesheet" href="lib/bootstrap/css/darkly.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-<table id="table">
-</table>
+<!--导航-->
+<nav class="nav navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand">Admin</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>后台首页</a></li>
+                <li><a href="user_list.html"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
+                <li><a href="content.html"><span class="glyphicon glyphicon-list-alt"></span>公告管理</a></li>
+                <%--<li><a href="tag.html"><span class="glyphicon glyphicon-tag"></span>标签管理</a></li>--%>
+                <li><a href="form.jsp"><span class="glyphicon glyphicon-info-sign"></span>教室申请</a></li>
+                <li><a href="classroom_info.jsp"><span class="glyphicon glyphicon-info-sign"></span>教室信息</a></li>
+                <li><a href="classroom_status.jsp"><span class="glyphicon glyphicon-info-sign"></span>教室状态</a></li>
+                <li class="active"><a href="application_history.jsp"><span class="glyphicon glyphicon-bookmark"></span>申请历史</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        admin
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="#" class=""><span class="glyphicon glyphicon-home"></span>前台首页</a></li>
+                        <li><a href="#" class=""><span class="glyphicon glyphicon-user"></span>个人主页</a></li>
+                        <li><a href="#" class=""><span class="glyphicon glyphicon-cog"></span>个人设置</a></li>
+                        <li><a href="#" class=""><span class="glyphicon glyphicon-credit-card"></span>账户中心</a></li>
+                        <li><a href="#" class=""><span class="glyphicon glyphicon-heart"></span>我的收藏</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html"><span class="glyphicon glyphicon-off"></span>退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <table id="table">
+    </table>
+</div>
 </body>
 <script>
     function initTable() {
@@ -33,7 +79,7 @@
             singleSelect: true, //复选框只能选择一条记录
             locale:'zh-CN', //国际化
             pagination: true, //启动分页
-            pageSize: 10,  //每页显示的记录数
+            pageSize: 20,  //每页显示的记录数
             pageNumber:1, //当前第几页
             pageList: [5, 10, 15, 20, 25],  //记录数可选列表
             search: true,  //是否启用查询

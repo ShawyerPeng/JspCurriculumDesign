@@ -7,6 +7,9 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="lib/bootstrap/css/darkly.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <style>
     .form-control-feedback {
@@ -22,15 +25,51 @@
     }
 </style>
 <body>
+<!--导航-->
+<nav class="nav navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand">Admin</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html"><span class="glyphicon glyphicon-home"></span>后台首页</a></li>
+                <li><a href="user_list.html"><span class="glyphicon glyphicon-user"></span>用户管理</a></li>
+                <li><a href="content.html"><span class="glyphicon glyphicon-list-alt"></span>公告管理</a></li>
+                <%--<li><a href="tag.html"><span class="glyphicon glyphicon-tag"></span>标签管理</a></li>--%>
+                <li class="active"><a href="form.jsp"><span class="glyphicon glyphicon-hand-right"></span>教室申请</a></li>
+                <li><a href="classroom_info.jsp"><span class="glyphicon glyphicon-info-sign"></span>教室信息</a></li>
+                <li><a href="classroom_status.jsp"><span class="glyphicon glyphicon-info-sign"></span>教室状态</a></li>
+                <li><a href="application_history.jsp"><span class="glyphicon glyphicon-bookmark"></span>申请历史</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        admin
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="#" class=""><span class="glyphicon glyphicon-home"></span>前台首页</a></li>
+                        <li><a href="#" class=""><span class="glyphicon glyphicon-user"></span>个人主页</a></li>
+                        <li><a href="#" class=""><span class="glyphicon glyphicon-cog"></span>个人设置</a></li>
+                        <li><a href="#" class=""><span class="glyphicon glyphicon-credit-card"></span>账户中心</a></li>
+                        <li><a href="#" class=""><span class="glyphicon glyphicon-heart"></span>我的收藏</a></li>
+                    </ul>
+                </li>
+                <li><a href="index.html"><span class="glyphicon glyphicon-off"></span>退出</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
 <div class="bs-example container">
-    <!--<label for="field2B">+ validation error</label>-->
-    <!--<span class="help-block">Lorem ipsum dolor sit amet.</span>-->
-    <!--<div class="form-control-wrapper has-feedback has-error">-->
-    <!--<input type="text" class="form-control" id="field2B">-->
-    <!--<span class="fa fa-check form-control-feedback feedback-success" aria-hidden="true"></span>-->
-    <!--</div>-->
     <h1 style="margin-left: 300px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;河海大学教室申请表</h1><br>
-    <form class="form-horizontal myform" action="/search" method="post">
+    <form class="form-horizontal myform" action="/apply" method="post">
         <div class="form-group">
             <label class="control-label col-xs-3" for="name">申请人姓名:</label>
             <div class="col-xs-3">
@@ -55,52 +94,6 @@
                 <input type="date" class="form-control" id="dateofuse" name="dateofuse" placeholder="使用日期">
             </div>
         </div>
-        <!--<div class="form-group">-->
-        <!--<label class="control-label col-xs-3">使用时间:</label>-->
-        <!--<div class="col-xs-3">-->
-        <!--<label class="checkbox inline">-->
-        <!--<input type="checkbox" id="inlineCheckbox1" value="option1"> 1-->
-        <!--</label>-->
-        <!--<label class="checkbox inline">-->
-        <!--<input type="checkbox" id="inlineCheckbox2" value="option2"> 2-->
-        <!--</label>-->
-        <!--<label class="checkbox inline">-->
-        <!--<input type="checkbox" id="inlineCheckbox3" value="option3"> 3-->
-        <!--</label>-->
-        <!--</div>-->
-        <!--</div>-->
-        <%--<div class="form-group">--%>
-            <%--<label class="control-label col-xs-3">使用时间:</label>--%>
-            <%--<div>--%>
-                <%--<div class="col-xs-1">--%>
-                    <%--<span style="line-height: 2.6">第</span>--%>
-                <%--</div>--%>
-                <%--<div class="col-xs-1">--%>
-                    <%--<select class="form-control">--%>
-                        <%--<option>1</option>--%>
-                        <%--<option>2</option>--%>
-                        <%--<option>3</option>--%>
-                        <%--<option>4</option>--%>
-                        <%--<option>5</option>--%>
-                    <%--</select>--%>
-                <%--</div>--%>
-                <%--<div class="col-xs-1">--%>
-                    <%--<span style="line-height: 2.6">-</span>--%>
-                <%--</div>--%>
-                <%--<div class="col-xs-1">--%>
-                    <%--<select class="form-control">--%>
-                        <%--<option>1</option>--%>
-                        <%--<option>2</option>--%>
-                        <%--<option>3</option>--%>
-                        <%--<option>4</option>--%>
-                        <%--<option>5</option>--%>
-                    <%--</select>--%>
-                <%--</div>--%>
-                <%--<div  class="col-xs-1">--%>
-                    <%--<span style="line-height: 2.6">大节</span>--%>
-                <%--</div>--%>
-            <%--</div>--%>
-        <%--</div>--%>
         <div class="form-group">
             <label class="control-label col-xs-3">使用时间:</label>
             <div class="col-xs-3">
@@ -160,13 +153,6 @@
                 <textarea rows="3" class="form-control" id="reason" name="reason" placeholder="申请理由"></textarea>
             </div>
         </div>
-        <!--<div class="form-group">-->
-        <!--<div class="col-xs-offset-3 col-xs-9">-->
-        <!--<label class="checkbox-inline">-->
-        <!--<input type="checkbox" value="news"> Send me latest news and updates.-->
-        <!--</label>-->
-        <!--</div>-->
-        <!--</div>-->
         <br>
         <div class="form-group">
             <div class="col-xs-offset-3 col-xs-9">
@@ -175,6 +161,7 @@
             </div>
         </div>
     </form>
+</div>
 </div>
 </body>
 
