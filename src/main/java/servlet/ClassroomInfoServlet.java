@@ -3,6 +3,7 @@ package servlet;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import po.Classroom;
+import service.SearchClassroomInfo;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,7 +30,7 @@ public class ClassroomInfoServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-        ArrayList<Classroom> classrooms = ClassroomInfo.getAllInfos(conn);
+        ArrayList<Classroom> classrooms = SearchClassroomInfo.getAllInfos(conn);
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String str = gson.toJson(classrooms);

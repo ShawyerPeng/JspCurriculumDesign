@@ -34,10 +34,8 @@ public class UserServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-
         Gson gson = new Gson();
         String str = gson.toJson(list);
-        System.out.println(str);
 
         response.setContentType("application/json;charset=UTF-8");
         PrintWriter out = response.getWriter();

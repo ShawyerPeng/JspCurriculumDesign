@@ -26,18 +26,14 @@ public class SearchClassroomServlet extends HttpServlet {
         Connection con = null;
         try {
             Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?useSSL=false", "root", "123");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
-        }
-        try {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?useSSL=false", "root", "123");
         } catch (SQLException e) {
             e.printStackTrace();
         }
+
         Vector<Classroom> vector = search(con, building, dateofuse, timeofuse, size, needMedia);
-        for (Classroom e : vector) {
-            System.out.println(e);
-        }
     }
 
     @Override

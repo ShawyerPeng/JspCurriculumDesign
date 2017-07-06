@@ -12,7 +12,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -27,5 +27,19 @@
     <orderEntry type="library" name="Maven: javax.servlet.jsp.jstl:jstl:1.2" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.42" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.1" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:kernel:7.0.3" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:io:7.0.3" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:layout:7.0.3" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:forms:7.0.3" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:pdfa:7.0.3" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:sign:7.0.3" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:barcodes:7.0.3" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:font-asian:7.0.3" level="project" />
+    <orderEntry type="library" name="Maven: com.itextpdf:hyph:7.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-core:2.8.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.logging.log4j:log4j-api:2.8.1" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.25" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-log4j12:1.7.25" level="project" />
+    <orderEntry type="library" name="Maven: log4j:log4j:1.2.17" level="project" />
   </component>
 </module>

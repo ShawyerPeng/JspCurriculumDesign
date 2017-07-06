@@ -34,7 +34,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="index.html" class="navbar-brand">Admin</a>
+            <a href="index.jsp" class="navbar-brand">Admin</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
@@ -68,6 +68,7 @@
 </nav>
 <div class="container">
 <div class="bs-example container">
+    <button data-target=" /export">借用教室审批表</button>
     <h1 style="margin-left: 300px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;河海大学教室申请表</h1><br>
     <form class="form-horizontal myform" action="/apply" method="post">
         <div class="form-group">

@@ -148,7 +148,7 @@
 </style>
 <body>
 <div id="main">
-    <h3 id="head"> ... </h3> <br/>
+    <h1 id="head"> ... </h1> <br/>
 </div>
 <div class="login-box">
     <div class="lb-header">

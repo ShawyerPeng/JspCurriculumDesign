@@ -3,6 +3,7 @@ package servlet;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import po.Status;
+import service.SearchClassroomStatus;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,22 +30,7 @@ public class ClassroomStatusServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-        // List list = new ArrayList();
-        // SimpleDateFormat all = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        // SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd");
-        // SimpleDateFormat time = new SimpleDateFormat("hh:mm:ss");
-        // System.out.println(time.format(Time.valueOf("13:44:53")));
-        // try {
-        //     list.add(new Record("pengxiaoye","1502040228","jixinyuan1",date.parse("1998-10-30"),111,new Date(2014,10,30),Time.valueOf("13:44:53"),"no reason"));
-        //     list.add(new Record("pengxiaoye","1502040229","jixinyuan2",date.parse("1998-10-30"),111,new Date(2014,10,30),Time.valueOf("13:44:53"),"no reason"));
-        //     list.add(new Record("pengxiaoye","1502040227","jixinyuan3",date.parse("1998-10-30"),111,new Date(2014,10,30),Time.valueOf("13:44:53"),"no reason"));
-        //     list.add(new Record("pengxiaoye","1502040226","jixinyuan4",date.parse("1998-10-30"),111,new Date(2014,10,30),Time.valueOf("13:44:53"),"no reason"));
-        //     list.add(new Status());
-        // } catch (ParseException e) {
-        //     e.printStackTrace();
-        // }
-
-        ArrayList<Status> statuses = ClassroomStatus.getAllStatus(conn);
+        ArrayList<Status> statuses = SearchClassroomStatus.getAllStatus(conn);
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String str = gson.toJson(statuses);

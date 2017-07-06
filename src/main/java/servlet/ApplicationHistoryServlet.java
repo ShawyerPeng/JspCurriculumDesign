@@ -3,6 +3,7 @@ package servlet;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import po.History;
+import service.SearchApplicationHistory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -29,13 +30,12 @@ public class ApplicationHistoryServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-        ArrayList<History> classrooms = ApplicationHistory.getAllHistory(conn);
+        ArrayList<History> classrooms = SearchApplicationHistory.getAllHistory(conn);
 
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         String str = gson.toJson(classrooms);
         response.setContentType("application/json;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        System.out.println(str);
         out.append(str);
         out.close();
     }

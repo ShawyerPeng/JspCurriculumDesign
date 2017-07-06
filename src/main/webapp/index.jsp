@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/bootstrap/css/darkly.css">
     <link rel="stylesheet" href="css/main.css">
+
+    <%--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>--%>
+
 </head>
 <body>
 <!--导航-->
@@ -110,25 +113,7 @@
         <div class="col-md-6">
             <div class="panel panel-default">
                 <div class="panel-heading">网站公告</div>
-                <ul class="list-group">
-                    <li class="list-group-item"><a href="#">在你所在的专业，有哪些核心期刊？
-                        <small class="pull-right">2015/08/08</small>
-                    </a></li>
-                    <li class="list-group-item"><a href="#">在你所在的专业，有哪些核心期刊？
-                        <small class="pull-right">2015/08/08</small>
-                    </a></li>
-                    <li class="list-group-item"><a href="#">在你所在的专业，有哪些核心期刊？
-                        <small class="pull-right">2015/08/08</small>
-                    </a></li>
-                    <li class="list-group-item"><a href="#">在你所在的专业，有哪些核心期刊？
-                        <small class="pull-right">2015/08/08</small>
-                    </a></li>
-                    <li class="list-group-item"><a href="#">在你所在的专业，有哪些核心期刊？
-                        <small class="pull-right">2015/08/08</small>
-                    </a></li>
-                    <li class="list-group-item"><a href="#">在你所在的专业，有哪些核心期刊？
-                        <small class="pull-right">2015/08/08</small>
-                    </a></li>
+                <ul class="list-group" id="list">
                 </ul>
             </div>
         </div>
@@ -137,8 +122,38 @@
 
 
 <script src="lib/jquery.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.0/jquery-confirm.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.0/jquery-confirm.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-<script src="lib/Chart.js"></script>
-<script src="js/script.js"></script>
+<script>
+    var data;
+    $(document).ready(function () {
+        $.ajax({
+            url: '/searchAnnouncement',
+            type: 'GET',
+            dataType: "json",
+            success: function (returndata) {
+                data = returndata;
+                for(var i=0; i<(Object.keys(returndata)).length; i++) {
+//                    $("#list").append('<li class="list-group-item"><a href="javascript:void(0)" onclick=\"getDetail(returndata[i].title)\">' + returndata[i].title +'<small class="pull-right">' + returndata[i].publishTime +'</small></a></li>')
+                    $("#list").append('<li class="list-group-item" id="test" value="" data-content=""><a href="javascript:void(0)" onclick="getDetail()">' + returndata[i].title +'<small class="pull-right">' + returndata[i].publishTime +'</small></a></li>')
+                }
+            },
+            error: function (returndata) {
+                console.log(returndata);
+            }
+        });
+    });
+
+//    function getDetail() {
+//        var detail = $(".list-group-item").data('content');
+//        $("#test").val(this.data[0].content);
+//        console.log(detail);
+//        $.confirm({
+//            content: detail,
+//            title: "Title"
+//        });
+//    }
+</script>
 </body>
 </html>

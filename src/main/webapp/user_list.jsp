@@ -83,27 +83,27 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <th>1</th>
-                    <td>admin</td>
-                    <td>admin@hhu.edu.cn</td>
-                    <td>
-                        <div role="presentation" class="dropdown">
-                            <button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"
-                                    role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                操作
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">编辑</a></li>
-                                <li><a href="#">删除</a></li>
-                                <li><a href="#">锁定</a></li>
-                                <li><a href="#">修改密码</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
+                <%--<tr>--%>
+                    <%--<th>1</th>--%>
+                    <%--<td>admin</td>--%>
+                    <%--<td>admin@hhu.edu.cn</td>--%>
+                    <%--<td>--%>
+                        <%--<div role="presentation" class="dropdown">--%>
+                            <%--<button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"--%>
+                                    <%--role="button"--%>
+                                    <%--aria-haspopup="true" aria-expanded="false">--%>
+                                <%--操作--%>
+                                <%--<span class="caret"></span>--%>
+                            <%--</button>--%>
+                            <%--<ul class="dropdown-menu">--%>
+                                <%--<li><a href="#">编辑</a></li>--%>
+                                <%--<li><a href="#">删除</a></li>--%>
+                                <%--<li><a href="#">锁定</a></li>--%>
+                                <%--<li><a href="#">修改密码</a></li>--%>
+                            <%--</ul>--%>
+                        <%--</div>--%>
+                    <%--</td>--%>
+                <%--</tr>--%>
                 </tbody>
             </table>
             <nav aria-label="Page navigation" class="pull-right">
@@ -182,5 +182,45 @@
 </div>
 <script src="lib/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var json = [];
+        $.ajax({
+            url: '/getAllUser',
+            type: 'GET',
+            dataType: "json",
+            success: function (returndata) {
+                for(var i=0; i<(Object.keys(returndata)).length; i++) {
+                    $("#tbody").append('<tr>' +
+                        '<th>'++'</th>' +
+                        '<td>'++'</td>' +
+                        '<td>'++'</td>' +
+                        '<td>' +
+                        '<div role="presentation" class="dropdown">' +
+                        '<button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"' +
+                        'role="button"' +
+                        'aria-haspopup="true" aria-expanded="false">' +
+                        '操作' +
+                        '<span class="caret"></span>' +
+                        '</button>' +
+                        '<ul class="dropdown-menu">' +
+                        '<li><a href="#">编辑</a></li>' +
+                        '<li><a href="#">删除</a></li>' +
+                        '<li><a href="#">锁定</a></li>' +
+                        '<li><a href="#">修改密码</a></li>' +
+                        '</ul>' +
+                        '</div>' +
+                        '</td>' +
+                        '</tr>')
+                }
+
+            },
+            error: function (returndata) {
+                console.log(returndata);
+            }
+        });
+    })
+
+</script>
 </body>
 </html>

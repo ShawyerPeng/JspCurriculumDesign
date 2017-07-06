@@ -3,18 +3,18 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-	<filter>
-		<filter-name>AuthFilter</filter-name>
-		<filter-class>servlet.AuthFilter</filter-class>
-		<init-param>
-			<param-name>excludedPages</param-name>
-			<param-value>/login.jsp;/register.jsp</param-value>
-		</init-param>
-	</filter>
-	<filter-mapping>
-		<filter-name>AuthFilter</filter-name>
-		<url-pattern>*.jsp</url-pattern>
-	</filter-mapping>
+	<!--<filter>-->
+		<!--<filter-name>AuthFilter</filter-name>-->
+		<!--<filter-class>filter.AuthFilter</filter-class>-->
+		<!--<init-param>-->
+			<!--<param-name>excludedPages</param-name>-->
+			<!--<param-value>/login.jsp;/register.jsp</param-value>-->
+		<!--</init-param>-->
+	<!--</filter>-->
+	<!--<filter-mapping>-->
+		<!--<filter-name>AuthFilter</filter-name>-->
+		<!--<url-pattern>*.jsp</url-pattern>-->
+	<!--</filter-mapping>-->
 
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>

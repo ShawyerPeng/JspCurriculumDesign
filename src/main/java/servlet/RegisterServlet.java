@@ -13,7 +13,7 @@ import java.io.IOException;
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.setContentType ( "text/html" );
+        response.setContentType("text/html");
         // 获取用户名和密码，封装进User对象...
         User user = new User();
         user.setUsername(request.getParameter("reg_username"));

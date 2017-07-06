@@ -75,26 +75,23 @@
                     <a href="" role="button" data-toggle="modal" data-target="#myModal">添加用户</a>
                 </li>
             </ul>
-            <form action="#" class="user_search">
+            <form action="/searchUser" class="user_search">
                 <div class="alert alert-info" role="alert">
                     <strong>技巧提示:</strong>支持模糊搜索和匹配搜索，匹配搜索使用*代替！
                 </div>
                 <div class="form-group">
-                    <label for="name">用户名</label>
-                    <input type="text" id="name" class="form-control" placeholder="请输入用户名">
+                    <label for="username">用户名</label>
+                    <input type="text" id="username" class="form-control" placeholder="请输入用户名">
                 </div>
-                <div class="form-group">
-                    <label for="uid">UID</label>
-                    <input type="text" id="uid" class="form-control" placeholder="请输入用户UID">
-                </div>
+                <%--<div class="form-group">--%>
+                    <%--<label for="uid">UID</label>--%>
+                    <%--<input type="text" id="uid" class="form-control" placeholder="请输入用户UID">--%>
+                <%--</div>--%>
                 <div class="form-group">
                     <label for="group">用户组</label>
-                    <select name="" id="group" class="form-control">
-                        <option value="">限制会员</option>
-                        <option value="">新手上路</option>
-                        <option value="">注册会员</option>
-                        <option value="">中级会员</option>
-                        <option value="">高级会员</option>
+                    <select name="isAdmin" id="group" class="form-control">
+                        <option value="0">学生</option>
+                        <option value="1">管理员</option>
                     </select>
                 </div>
                 <button type="submit" class="btn btn-default">搜索</button>

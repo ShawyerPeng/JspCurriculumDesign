@@ -74,193 +74,33 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th>文章标题</th>
+                    <th>公告标题</th>
                     <th>作者</th>
                     <th>发布时间</th>
                     <th>操作</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>
-                    <th>产品经理常犯的7大错误，你造吗？</th>
-                    <td>杨泽</td>
-                    <td>2017/02/15</td>
-                    <td>
-                        <div role="presentation" class="dropdown">
-                            <button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"
-                                    role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                操作
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">编辑</a></li>
-                                <li><a href="#">删除</a></li>
-                                <li><a href="#">全局置顶</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>产品经理常犯的7大错误，你造吗？</th>
-                    <td>杨泽</td>
-                    <td>2017/02/15</td>
-                    <td>
-                        <div role="presentation" class="dropdown">
-                            <button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"
-                                    role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                操作
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">编辑</a></li>
-                                <li><a href="#">删除</a></li>
-                                <li><a href="#">全局置顶</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>产品经理常犯的7大错误，你造吗？</th>
-                    <td>杨泽</td>
-                    <td>2017/02/15</td>
-                    <td>
-                        <div role="presentation" class="dropdown">
-                            <button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"
-                                    role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                操作
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">编辑</a></li>
-                                <li><a href="#">删除</a></li>
-                                <li><a href="#">全局置顶</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>产品经理常犯的7大错误，你造吗？</th>
-                    <td>杨泽</td>
-                    <td>2017/02/15</td>
-                    <td>
-                        <div role="presentation" class="dropdown">
-                            <button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"
-                                    role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                操作
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">编辑</a></li>
-                                <li><a href="#">删除</a></li>
-                                <li><a href="#">全局置顶</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>产品经理常犯的7大错误，你造吗？</th>
-                    <td>杨泽</td>
-                    <td>2017/02/15</td>
-                    <td>
-                        <div role="presentation" class="dropdown">
-                            <button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"
-                                    role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                操作
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">编辑</a></li>
-                                <li><a href="#">删除</a></li>
-                                <li><a href="#">全局置顶</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>产品经理常犯的7大错误，你造吗？</th>
-                    <td>杨泽</td>
-                    <td>2017/02/15</td>
-                    <td>
-                        <div role="presentation" class="dropdown">
-                            <button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"
-                                    role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                操作
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">编辑</a></li>
-                                <li><a href="#">删除</a></li>
-                                <li><a href="#">全局置顶</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>产品经理常犯的7大错误，你造吗？</th>
-                    <td>杨泽</td>
-                    <td>2017/02/15</td>
-                    <td>
-                        <div role="presentation" class="dropdown">
-                            <button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"
-                                    role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                操作
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">编辑</a></li>
-                                <li><a href="#">删除</a></li>
-                                <li><a href="#">全局置顶</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>产品经理常犯的7大错误，你造吗？</th>
-                    <td>杨泽</td>
-                    <td>2017/02/15</td>
-                    <td>
-                        <div role="presentation" class="dropdown">
-                            <button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"
-                                    role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                操作
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">编辑</a></li>
-                                <li><a href="#">删除</a></li>
-                                <li><a href="#">全局置顶</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>产品经理常犯的7大错误，你造吗？</th>
-                    <td>杨泽</td>
-                    <td>2017/02/15</td>
-                    <td>
-                        <div role="presentation" class="dropdown">
-                            <button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"
-                                    role="button"
-                                    aria-haspopup="true" aria-expanded="false">
-                                操作
-                                <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">编辑</a></li>
-                                <li><a href="#">删除</a></li>
-                                <li><a href="#">全局置顶</a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
+                <tbody id="tbody">
+                <%--<tr>--%>
+                    <%--<th>产品经理常犯的7大错误，你造吗？</th>--%>
+                    <%--<td>杨泽</td>--%>
+                    <%--<td>2017/02/15</td>--%>
+                    <%--<td>--%>
+                        <%--<div role="presentation" class="dropdown">--%>
+                            <%--<button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"--%>
+                                    <%--role="button"--%>
+                                    <%--aria-haspopup="true" aria-expanded="false">--%>
+                                <%--操作--%>
+                                <%--<span class="caret"></span>--%>
+                            <%--</button>--%>
+                            <%--<ul class="dropdown-menu">--%>
+                                <%--<li><a href="#">编辑</a></li>--%>
+                                <%--<li><a href="#">删除</a></li>--%>
+                                <%--<li><a href="#">全局置顶</a></li>--%>
+                            <%--</ul>--%>
+                        <%--</div>--%>
+                    <%--</td>--%>
+                <%--</tr>--%>
                 </tbody>
             </table>
             <nav aria-label="Page navigation" class="pull-right">
@@ -351,5 +191,46 @@
 </div>
 <script src="lib/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var json = [];
+        $.ajax({
+            url: '/searchAnnouncement',
+            type: 'GET',
+            dataType: "json",
+            success: function (returndata) {
+                for(var i=0; i<(Object.keys(returndata)).length; i++) {
+                    console.log(returndata[i].title);
+//                    $("#available").append(returndata[i].title + returndata[i].author + returndata[i].content + returndata[i].publishTime + returndata[i].isTop);
+                    $("#tbody").append('<tr>' +
+                        '<th>' + returndata[i].title + '</th>' +
+                    '<td>'+ returndata[i].author +'</td>' +
+                        '<td>' + returndata[i].publishTime + '</td>' +
+                    '<td>' +
+                    '<div role="presentation" class="dropdown">' +
+                        '<button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"' +
+                        'role="button"' +
+                        'aria-haspopup="true" aria-expanded="false">' +
+                        '操作' +
+                    '<span class="caret"></span>' +
+                    '</button>' +
+                    '<ul class="dropdown-menu">' +
+                    '<li><a href="#">编辑</a></li>' +
+                    '<li><a href="#">删除</a></li>' +
+                    '<li><a href="#">全局置顶</a></li>' +
+                    '</ul>' +
+                    '</div>' +
+                    '</td>' +
+                    '</tr>"))')
+                }
+
+            },
+            error: function (returndata) {
+                console.log(returndata);
+            }
+        });
+    })
+
+</script>
 </body>
 </html>

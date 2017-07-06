@@ -10,6 +10,20 @@
           <element id="library" level="project" name="Maven: javax.servlet.jsp.jstl:jstl:1.2" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.42" />
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.1" />
+          <element id="library" level="project" name="Maven: com.itextpdf:kernel:7.0.3" />
+          <element id="library" level="project" name="Maven: com.itextpdf:io:7.0.3" />
+          <element id="library" level="project" name="Maven: com.itextpdf:layout:7.0.3" />
+          <element id="library" level="project" name="Maven: com.itextpdf:forms:7.0.3" />
+          <element id="library" level="project" name="Maven: com.itextpdf:pdfa:7.0.3" />
+          <element id="library" level="project" name="Maven: com.itextpdf:sign:7.0.3" />
+          <element id="library" level="project" name="Maven: com.itextpdf:barcodes:7.0.3" />
+          <element id="library" level="project" name="Maven: com.itextpdf:font-asian:7.0.3" />
+          <element id="library" level="project" name="Maven: com.itextpdf:hyph:7.0.3" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-core:2.8.1" />
+          <element id="library" level="project" name="Maven: org.apache.logging.log4j:log4j-api:2.8.1" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-log4j12:1.7.25" />
+          <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />
         </element>
       </element>
       <element id="directory" name="META-INF">

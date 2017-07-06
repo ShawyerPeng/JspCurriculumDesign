@@ -69,23 +69,24 @@
             </div>
             <ul class="nav nav-tabs">
                 <li><a href="content.jsp">公告管理</a></li>
-                <li class="active"><a href="user_search.jsp">添加公告</a></li>
+                <li class="active"><a href="content_post.jsp">添加公告</a></li>
             </ul>
-            <form action="#">
+            <form action="/insertAnnouncement" method="post">
                 <div class="form-group">
                     <label for="title">标题</label>
-                    <input type="text" id="title" class="form-control" placeholder="请输入文章标题">
+                    <input type="text" id="title" name="title" class="form-control" placeholder="请输入文章标题">
                 </div>
                 <div class="form-group">
-                    <label for="text">文章内容</label>
-                    <textarea class="form-control" name="" id="text" cols="30" rows="10"></textarea>
+                    <label for="content">公告内容</label>
+                    <textarea class="form-control" name="content" id="content" cols="30" rows="10"></textarea>
                 </div>
                 <div class="checkbox pull-left">
                     <label>
-                        <input type="checkbox">全局置顶
+                        <input type="checkbox" name="isTop" id="isTop" value="1">全局置顶
                     </label>
                 </div>
-                <button class="btn btn-default pull-right" type="submit">发布文章</button>
+                <input type="text" name="author" id="author" value="Shawyer" style="display: none">
+                <button class="btn btn-default pull-right" type="submit">发布公告</button>
             </form>
             <div class="col-md-12">
                 <nav aria-label="Page navigation" class="pull-right">
