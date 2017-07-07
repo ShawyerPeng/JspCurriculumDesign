@@ -27,11 +27,10 @@ public class RegisterServlet extends HttpServlet {
         try{
             if(userdao.add(user)){
                 response.sendRedirect("/login.jsp");
-            }
-            else{
+            } else{
                 response.sendRedirect("/login.jsp");
             }
-        }catch( Exception e ){
+        } catch( Exception e ){
             e.printStackTrace ();
         }
     }

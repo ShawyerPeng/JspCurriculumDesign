@@ -48,7 +48,7 @@
                         <li><a href="#" class=""><span class="glyphicon glyphicon-heart"></span>我的收藏</a></li>
                     </ul>
                 </li>
-                <li><a href="index.jsp"><span class="glyphicon glyphicon-off"></span>退出</a></li>
+                <li><a href="login.jsp"><span class="glyphicon glyphicon-off"></span>退出</a></li>
             </ul>
         </div>
     </div>
@@ -78,11 +78,11 @@
                 <tr>
                     <th>ID</th>
                     <th>用户名</th>
-                    <th>邮箱</th>
+                    <th>是否管理员</th>
                     <th>操作</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody">
                 <%--<tr>--%>
                     <%--<th>1</th>--%>
                     <%--<td>admin</td>--%>
@@ -184,7 +184,6 @@
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script>
     $(document).ready(function () {
-        var json = [];
         $.ajax({
             url: '/getAllUser',
             type: 'GET',
@@ -192,9 +191,9 @@
             success: function (returndata) {
                 for(var i=0; i<(Object.keys(returndata)).length; i++) {
                     $("#tbody").append('<tr>' +
-                        '<th>'++'</th>' +
-                        '<td>'++'</td>' +
-                        '<td>'++'</td>' +
+                        '<th>'+returndata[i].userid+'</th>' +
+                        '<td>'+returndata[i].username+'</td>' +
+                        '<td>'+returndata[i].isAdmin+'</td>' +
                         '<td>' +
                         '<div role="presentation" class="dropdown">' +
                         '<button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"' +

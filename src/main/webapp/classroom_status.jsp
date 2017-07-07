@@ -52,16 +52,61 @@
                         <li><a href="#" class=""><span class="glyphicon glyphicon-heart"></span>我的收藏</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html"><span class="glyphicon glyphicon-off"></span>退出</a></li>
+                <li><a href="login.jsp"><span class="glyphicon glyphicon-off"></span>退出</a></li>
             </ul>
         </div>
     </div>
 </nav>
 <div class="container">
+    <div class="row">
+        <div class="con-md-12">
+            <div class="page-header">
+                <h1>输入筛选标签</h1>
+            </div>
+            <div class="col-md-12 pad0">
+                <form action="">
+                    <div class="col-md-10">
+                        <input type="text" class="form-control" placeholder="请输入标签" id="tag">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-default" id="add">添加</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-12 taglist" id="tags">
+            </div>
+        </div>
+    </div>
+
     <table id="table">
     </table>
 </div>
 </body>
+<script>
+    $("#add").click(function () {
+        $("#tags").append('<div class="alert alert-info alert-dismissible pull-left" role="alert">'+
+            '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
+        '<strong>'+$("#tag").val()+'</strong>'+
+        '</div>');
+
+        $.ajax({
+            url: '/searchByTag',
+            type: 'POST',
+            contentType: "application/x-www-form-urlencoded",
+            data: {
+                date_use: $("#tags:eq(0) strong").html(),
+                time_use: $("#tags:eq(1) strong").html()
+            },
+            dataType: "json",
+            success: function (returndata) {
+                console.log(returndata);
+            },
+            error: function (returndata) {
+                console.log(returndata);
+            }
+        });
+    });
+</script>
 <script>
     function initTable() {
         //初始化表格,动态从服务器加载数据

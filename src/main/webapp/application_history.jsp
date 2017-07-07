@@ -52,7 +52,7 @@
                         <li><a href="#" class=""><span class="glyphicon glyphicon-heart"></span>我的收藏</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html"><span class="glyphicon glyphicon-off"></span>退出</a></li>
+                <li><a href="login.jsp"><span class="glyphicon glyphicon-off"></span>退出</a></li>
             </ul>
         </div>
     </div>

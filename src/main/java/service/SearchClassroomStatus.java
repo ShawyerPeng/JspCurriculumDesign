@@ -19,7 +19,6 @@ public class SearchClassroomStatus {
                 Date date_use = rs.getDate(2);
                 String time_use = rs.getString(3);
                 String state = rs.getString(4);
-                System.out.println(state);
                 arrayList.add(new Status(room_id, date_use, time_use, state));
             }
             con.close();

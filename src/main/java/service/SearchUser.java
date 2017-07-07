@@ -25,11 +25,12 @@ public class SearchUser {
         ArrayList<User> users = new ArrayList<User>();
         try{
             Statement sql = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            ResultSet rs = sql.executeQuery("SELECT username, is_admin FROM user");
+            ResultSet rs = sql.executeQuery("SELECT userid, username, is_admin FROM user");
             while (rs.next()) {
-                String username = rs.getString(1);
-                int isAdmin = rs.getInt(2);
-                users.add(new User(username, isAdmin));
+                int userid = rs.getInt(1);
+                String username = rs.getString(2);
+                int isAdmin = rs.getInt(3);
+                users.add(new User(userid, username, isAdmin));
             }
         } catch(SQLException e) {
             e.printStackTrace();

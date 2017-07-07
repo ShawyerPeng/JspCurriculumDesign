@@ -7,7 +7,7 @@
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" href="http://www.bootcss.com/p/buttons/css/buttons.css">
     <link rel="stylesheet" href="lib/bootstrap/css/darkly.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -61,14 +61,13 @@
                         <li><a href="#" class=""><span class="glyphicon glyphicon-heart"></span>我的收藏</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html"><span class="glyphicon glyphicon-off"></span>退出</a></li>
+                <li><a href="login.jsp"><span class="glyphicon glyphicon-off"></span>退出</a></li>
             </ul>
         </div>
     </div>
 </nav>
 <div class="container">
 <div class="bs-example container">
-    <button data-target=" /export">借用教室审批表</button>
     <h1 style="margin-left: 300px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;河海大学教室申请表</h1><br>
     <form class="form-horizontal myform" action="/apply" method="post">
         <div class="form-group">
@@ -162,6 +161,7 @@
             </div>
         </div>
     </form>
+    <input type="button" value="下载审批表" class="button button-royal button-pill button-small" onclick="window.location='/export'" />
 </div>
 </div>
 </body>

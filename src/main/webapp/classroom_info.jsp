@@ -52,14 +52,62 @@
                         <li><a href="#" class=""><span class="glyphicon glyphicon-heart"></span>我的收藏</a></li>
                     </ul>
                 </li>
-                <li><a href="index.html"><span class="glyphicon glyphicon-off"></span>退出</a></li>
+                <li><a href="login.jsp"><span class="glyphicon glyphicon-off"></span>退出</a></li>
             </ul>
         </div>
     </div>
 </nav>
 <div class="container">
+    <a href="" style="width:100px;" role="button" class="list-group-item" data-toggle="modal" data-target="#myModal">添加教室</a>
     <table id="table">
     </table>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">添加教室</h4>
+            </div>
+            <div class="modal-body">
+                <form action="/insertClassroomInfo" method="post">
+                    <div class="form-group">
+                        <label for="building">所在楼栋</label>
+                        <select id="building" name="building" class="form-control">
+                            <option value="致高楼A">致高楼A</option>
+                            <option value="致高楼B">致高楼B</option>
+                            <option value="致用楼">致用楼</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="room_name">教室号</label>
+                        <input id="room_name" name="room_name" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="room_size">教室大小</label>
+                        <select id="room_size" name="room_size" class="form-control">
+                            <option value="大">大</option>
+                            <option value="中">中</option>
+                            <option value="小">小</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="has_media">是否有多媒体</label>
+                        <select id="has_media" name="has_media" class="form-control">
+                            <option value="是">是</option>
+                            <option value="否">否</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="submit" class="btn btn-primary">提交</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
 </div>
 </body>
 <script>

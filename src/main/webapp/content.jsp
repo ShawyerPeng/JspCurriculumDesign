@@ -48,7 +48,7 @@
                         <li><a href="#" class=""><span class="glyphicon glyphicon-heart"></span>我的收藏</a></li>
                     </ul>
                 </li>
-                <li><a href="index.jsp"><span class="glyphicon glyphicon-off"></span>退出</a></li>
+                <li><a href="login.jsp"><span class="glyphicon glyphicon-off"></span>退出</a></li>
             </ul>
         </div>
     </div>
@@ -81,26 +81,6 @@
                 </tr>
                 </thead>
                 <tbody id="tbody">
-                <%--<tr>--%>
-                    <%--<th>产品经理常犯的7大错误，你造吗？</th>--%>
-                    <%--<td>杨泽</td>--%>
-                    <%--<td>2017/02/15</td>--%>
-                    <%--<td>--%>
-                        <%--<div role="presentation" class="dropdown">--%>
-                            <%--<button class="dropdown-toggle btn btn-primary" data-toggle="dropdown" href="#"--%>
-                                    <%--role="button"--%>
-                                    <%--aria-haspopup="true" aria-expanded="false">--%>
-                                <%--操作--%>
-                                <%--<span class="caret"></span>--%>
-                            <%--</button>--%>
-                            <%--<ul class="dropdown-menu">--%>
-                                <%--<li><a href="#">编辑</a></li>--%>
-                                <%--<li><a href="#">删除</a></li>--%>
-                                <%--<li><a href="#">全局置顶</a></li>--%>
-                            <%--</ul>--%>
-                        <%--</div>--%>
-                    <%--</td>--%>
-                <%--</tr>--%>
                 </tbody>
             </table>
             <nav aria-label="Page navigation" class="pull-right">

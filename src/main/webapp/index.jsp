@@ -10,10 +10,12 @@
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="lib/bootstrap/css/darkly.css">
     <link rel="stylesheet" href="css/main.css">
-
-    <%--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>--%>
-
 </head>
+<style>
+    /*时间*/
+    .time-title .year-month{ padding:10px; background-color:#09C; height:100%; color:#FFF;}
+    .time-title .hour-minute{color:#09C; line-height:70px; background-color:#FFF; padding-left:10px; padding-right:10px;}
+</style>
 <body>
 <!--导航-->
 <nav class="nav navbar-default">
@@ -56,6 +58,7 @@
         </div>
     </div>
 </nav>
+
 <!--/导航-->
 <div class="container">
     <div class="row">
@@ -72,7 +75,7 @@
                 </p>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-6" style="display: none">
             <div class="panel panel-default">
                 <div class="panel-heading">网站数据统计</div>
                 <div class="panel-body">
@@ -110,11 +113,18 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-9">
             <div class="panel panel-default">
                 <div class="panel-heading">网站公告</div>
                 <ul class="list-group" id="list">
                 </ul>
+            </div>
+        </div>
+        <div class="time-title pull-right">
+            <div class="year-month pull-left">
+                <p id="xq"></p>
+                <p><span id="year"></span>年<span id="month"></span>月<span id="day"></span>日</p>
+                <p><strong id="hour"></strong><strong>:</strong><strong id="minute"></strong></p>
             </div>
         </div>
     </div>
@@ -143,6 +153,16 @@
                 console.log(returndata);
             }
         });
+
+        var date = new Date();
+        var day_list = ['日', '一', '二', '三', '四', '五', '六'];
+        $("#xq").html("星期" + day_list[date.getDay()]);
+        $("#year").html(date.getFullYear());
+        $("#month").html(date.getMonth()+1);
+        $("#day").html(date.getDate());
+        $("#hour").html(date.getHours()>9?date.getHours().toString():'0' + date.getHours());
+        $("#minute").html(date.getMinutes()>9?date.getMinutes().toString():'0' + date.getMinutes());
+        $("#time").html(date.getTime());
     });
 
 //    function getDetail() {

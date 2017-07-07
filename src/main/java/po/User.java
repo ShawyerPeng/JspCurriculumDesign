@@ -1,7 +1,7 @@
 package po;
 
 public class User {
-    private String userid;
+    private int userid;
     private String username;
     private String password;
     private int isAdmin;
@@ -13,17 +13,22 @@ public class User {
         this.username = username;
         this.isAdmin = isAdmin;
     }
-    public User(String userid, String username, String password, int isAdmin) {
+    public User(int userid, String username, int isAdmin) {
+        this.userid = userid;
+        this.username = username;
+        this.isAdmin = isAdmin;
+    }
+    public User(int userid, String username, String password, int isAdmin) {
         this.userid = userid;
         this.username = username;
         this.password = password;
         this.isAdmin = isAdmin;
     }
 
-    public String getUserid() {
+    public int getUserid() {
         return userid;
     }
-    public void setUserid(String userid) {
+    public void setUserid(int userid) {
         this.userid = userid;
     }
     public String getUsername() {
