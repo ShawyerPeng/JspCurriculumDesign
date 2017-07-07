@@ -59,36 +59,122 @@
 </nav>
 <div class="container">
     <div class="row">
-        <div class="con-md-12">
+        <div class="con-md-8">
             <div class="page-header">
-                <h1>输入筛选标签</h1>
+                <h1>输入筛选条件</h1>
             </div>
             <div class="col-md-12 pad0">
-                <form action="">
-                    <div class="col-md-10">
-                        <input type="text" class="form-control" placeholder="请输入标签" id="tag">
+                <form>
+                    <div class="form-group">
+                        <label class="control-label col-xs-1">使用日期:</label>
+                        <div class="col-xs-2">
+                            <input type="date" class="form-control" id="dateofuse" name="dateofuse" placeholder="使用日期">
+                        </div>
                     </div>
-                    <div class="col-md-2">
-                        <button type="button" class="btn btn-default" id="add">添加</button>
+                    <div class="form-group">
+                        <label class="control-label col-xs-1">使用时间:</label>
+                        <div class="col-xs-2">
+                        <select id="timeofuse" name="timeofuse" class="form-control">
+                                <option>第一大节</option>
+                                <option>第二大节</option>
+                                <option>第三大节</option>
+                                <option>第四大节</option>
+                                <option>第五大节</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-1" for="building">所在楼栋</label>
+                        <div class="col-xs-2">
+                        <select id="building" name="building" class="form-control">
+                            <option>不限</option>
+                            <option value="致高楼A">致高楼A</option>
+                            <option value="致高楼B">致高楼B</option>
+                            <option value="致用楼">致用楼</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-1" for="room_size">教室大小</label>
+                        <div class="col-xs-2">
+                        <select id="room_size" name="room_size" class="form-control">
+                            <option>不限</option>
+                            <option value="大">大</option>
+                            <option value="中">中</option>
+                            <option value="小">小</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-1" for="has_media">是否有多媒体</label>
+                        <div class="col-xs-2">
+                        <select id="has_media" name="has_media" class="form-control">
+                            <option>不限</option>
+                            <option value="是">是</option>
+                            <option value="否">否</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="filter">筛选</button>
                     </div>
                 </form>
-            </div>
-            <div class="col-md-12 taglist" id="tags">
             </div>
         </div>
     </div>
 
     <table id="table">
     </table>
+    <table id="table2">
+    </table>
 </div>
 </body>
 <script>
-    $("#add").click(function () {
-        $("#tags").append('<div class="alert alert-info alert-dismissible pull-left" role="alert">'+
-            '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
-        '<strong>'+$("#tag").val()+'</strong>'+
-        '</div>');
+    $("#filter").click(function () {
+        $.ajax({
+            url: '/searchByTag',
+            type: 'POST',
+            contentType: "application/x-www-form-urlencoded",
+            data: {
+                date_use: $("#dateofuse").val(),
+                time_use: $("#timeofuse").val(),
+                building: $("#building").val(),
+                room_size: $("#room_size").val(),
+                has_media: $("#has_media").val()
+            },
+            dataType: "json",
+            success: function (returndata) {
+//                var table =document.getElementById("table");
+//                table.style.display="none";
+                $('#table2').bootstrapTable({
+                    columns: [{
+                        field: 'roomId',
+                        title: 'roomId'
+                    }, {
+                        field: 'dateUse',
+                        title: 'dateUse'
+                    }, {
+                        field: 'timeUse',
+                        title: 'timeUse'
+                    }, {
+                        field: 'state',
+                        title: 'state'
+                    }],
+                    data: [{
+                        roomId: returndata[0].roomId,
+                        dateUse: returndata[0].dateUse,
+                        timeUse: returndata[0].timeUse,
+                        state: returndata[0].state
+                    }]
+                });
+            },
+            error: function (returndata) {
+                console.log(returndata);
+            }
+        });
+    });
 
+    $("#add").click(function () {
         $.ajax({
             url: '/searchByTag',
             type: 'POST',
@@ -105,7 +191,7 @@
                 console.log(returndata);
             }
         });
-    });
+    })
 </script>
 <script>
     function initTable() {
@@ -146,6 +232,9 @@
                 {field:'state',title:'教室状态',align:'center',sortable:true}
             ]
         });
+
+//        var params = {index:insertIndex + 1, row:insertRow};
+//        $('#table').bootstrapTable('insertRow', params);
     }
 
     $(document).ready(function () {

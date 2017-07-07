@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
@@ -28,7 +29,27 @@ public class RegisterServlet extends HttpServlet {
             if(userdao.add(user)){
                 response.sendRedirect("/login.jsp");
             } else{
-                response.sendRedirect("/login.jsp");
+                response.setContentType("text/html;charset=UTF-8");
+                PrintWriter out = response.getWriter();
+                out.append("<script type=\"text/javascript\">     \n" +
+                        "function countDown(secs,surl){     \n" +
+                        " //alert(surl);     \n" +
+                        " var jumpTo = document.getElementById('jumpTo');\n" +
+                        " jumpTo.innerHTML=secs;  \n" +
+                        " if(--secs>0){     \n" +
+                        "     setTimeout(\"countDown(\"+secs+\",'\"+surl+\"')\",1000);     \n" +
+                        "     }     \n" +
+                        " else{       \n" +
+                        "     location.href=surl;     \n" +
+                        "     }     \n" +
+                        " }     \n" +
+                        "</script> \n" +
+                        "</head>\n" +
+                        "\n" +
+                        "<body><span id=\"jumpTo\">用户名重复, 5</span>秒后自动跳转\n" +
+                        "<script type=\"text/javascript\">countDown(5,'/register.jsp');</script>  ");
+                out.close();
+                // response.sendRedirect("/register.jsp");
             }
         } catch( Exception e ){
             e.printStackTrace ();

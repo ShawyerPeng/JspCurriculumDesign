@@ -177,7 +177,7 @@
             <span id="info" style="color: Red;display: inline-block;"></span>
         </div>
         <div class="u-form-group">
-           <button>注册</button>
+           <button type="submit">注册</button>
         </div>
     </form>
 </div>
